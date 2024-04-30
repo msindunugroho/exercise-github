@@ -1,5 +1,5 @@
-const getData = () => {
-  return fetch('https://www.google.com/global-API/?search=javascript+module')
+export const getData = (key, value) => {
+  return fetch(`https://www.google.com/global-API/?${key}=${value}`)
     .then(response => {
       if(!response.ok) throw new Error(response.statusText)
       return response
