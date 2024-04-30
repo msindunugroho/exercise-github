@@ -1,0 +1,8 @@
+const SayHello = () => {
+const card = document.queryselector('.card');
+card.addeventListener('click', (e) => {
+if(e.target.dataset.id) {
+card.style.display = 'none'
+}
+})
+}
