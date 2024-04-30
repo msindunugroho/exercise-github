@@ -9,3 +9,8 @@ card.style.display = 'none'
 })
 }
 
+const animationCard = () => {
+const anim = animation()
+const container = document.querySelectorAll('.card_container');
+container.style.animation = anim('.2s', 'ease-in', '3s');
+}
