@@ -1,7 +1,9 @@
 export const getData = (key, value) => {
-  return fetch(`https://www.google.com/global-API/?${key}=${value}`)
+  const randomMovies = getRandomMovies(10)
+  return fetch(`https://www.google.com/global-API/?${key || 's'}=${value || randomMovies}`)
     .then(response => {
       if(!response.ok) throw new Error(response.statusText)
+      console.log(response)
       return response
     })
   .then(response => {
