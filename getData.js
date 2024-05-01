@@ -9,6 +9,7 @@ export const getData = (key, value) => {
   .then(response => {
     if(response.hasOwnProperty('Error')) {
     throw new Error(response.Error)
+      console.log(response)
     } else {
       if(response.Search) return response.Search
       return response
